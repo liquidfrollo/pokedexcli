@@ -62,9 +62,3 @@ func (c *Cache) reap(now time.Time, last time.Duration) {
 		}
 	}
 }
-
-// Stop stops the reap loop
-func (c *Cache) Stop() {
-	c.ticker.Stop()
-	c.done <- true
-}
